@@ -1,5 +1,5 @@
 <h1 style="color: {{ include.color }}">{{ site.title }}</h1>
 {% for post in site.posts %}
-<li><a href={{post.url}} style="{% if page.url == post.url %} color:red; {%else%} color:blue {% endif %}">{{ post.title }}</a></li>
+<li><a href={{post.url | relative_url}} style="{% if page.url == post.url %} color:red; {%else%} color:blue {% endif %}">{{ post.title }}</a></li>
 {% endfor %}
 <hr>
